@@ -1,14 +1,20 @@
+pub struct NutProject {
+
+}
+
+/// Module is a high level entity of Nut program
 pub struct NutModule {
     name: String,
 }
 
-pub struct NutFunctions {
+pub struct NutFunction {
     // signature
     name: String,
     instructions: Vec<NutInstructionCode>,
 }
 
-pub struct NutProto {
+/// Prototype
+pub struct NutPrototype {
     name: String,
     args: Vec<String>
 }
@@ -16,6 +22,7 @@ pub struct NutProto {
 pub struct NutItem {
     /// ref to module
     item_type: NutType,
+    item_value: ItemValue,
 }
 
 pub struct NutStr {
@@ -23,9 +30,31 @@ pub struct NutStr {
     string: String
 }
 
+pub struct NutName {
+    name: String
+}
+
+pub struct ItemValue {
+    func: NutFunction,
+    proto: NutPrototype,
+    import_id: NutName,
+    export_id: NutName,
+    forward_id: NutName,
+    // todo: data
+    data: String,
+    // todo: ref data
+    ref_data: String,
+    // todo: expr data
+    expr_data: String,
+}
+
 /// MIR_insn_code_t
 /// Insns: [GNU Insns](https://gcc.gnu.org/onlinedocs/gccint/Insns.html)
 pub enum NutInstructionCode {
+    // 2 operand insns: */
+    Moves,
+    // todo: Extensions
+    // 3. operand insn
     Addition,
     Subtraction,
     Multiplication,
@@ -40,6 +69,16 @@ pub enum NutInstructionCode {
     GreaterThen,
     GreaterOrEqual,
     // todo: others
+    Call(NutCall),
+}
+
+pub struct NutCall {
+    prototype: String,
+    inline: String
+}
+
+pub struct NutInline {
+
 }
 
 pub enum NutType {
@@ -55,8 +94,18 @@ pub enum NutType {
     CollectionType(NutCollection)
 }
 
-pub enum NutIntegerType {}
-pub enum NutFloatType {}
-pub enum NutPointerType {}
+pub enum NutIntegerType {
+    I8, U8, I16, U16, I32, U32, I64, U64
+}
+
+pub enum NutFloatType {
+    Float, Double, LongDouble,
+}
+
+pub enum NutPointerType {
+    Pointer, MemoryBlock
+}
 pub enum NutReturnBlock {}
-pub enum NutCollection {}
+pub enum NutCollection {
+    Undef, Bound
+}
