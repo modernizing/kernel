@@ -1,9 +1,10 @@
 # Kernel
 
-the design princinples of new moderinizing toolsets
+the design principles of new modernizing toolsets
 
+![Process](docs/kernel-process.svg)
 
-## Process
+## Todo
 
 - [ ] generate core model code (Java, Rust, Golang...) from code protocol
 - [ ] pipeline architecture of system

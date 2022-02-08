@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="744px" height="485px" viewBox="0 0 744 485" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 62 (91390) - https://sketch.com -->
+    <title>Group</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Group" transform="translate(1.000000, 0.000000)">
+            <g id="Group-8" transform="translate(289.000000, 142.000000)">
+                <rect id="Rectangle" stroke="#979797" fill="#D8D8D8" x="0.5" y="0.5" width="164" height="65"></rect>
+                <text id="core-models-(kernel)" font-family="HelveticaNeue, Helvetica Neue" font-size="24" font-weight="normal" fill="#000000">
+                    <tspan x="16.26" y="28">core models</tspan>
+                    <tspan x="43.62" y="56">(kernel)</tspan>
+                </text>
+            </g>
+            <g id="Group-8" transform="translate(0.000000, 142.000000)">
+                <rect id="Rectangle" stroke="#979797" fill="#D8D8D8" x="0.5" y="0.5" width="164" height="65"></rect>
+                <text id="code-analyser" font-family="HelveticaNeue, Helvetica Neue" font-size="24" font-weight="normal" fill="#000000">
+                    <tspan x="8" y="42">code analyser</tspan>
+                </text>
+            </g>
+            <g id="Group-7" transform="translate(578.000000, 286.000000)">
+                <rect id="Rectangle" stroke="#979797" fill="#D8D8D8" x="0.5" y="0.5" width="164" height="65"></rect>
+                <text id="visulazation" font-family="HelveticaNeue, Helvetica Neue" font-size="24" font-weight="normal" fill="#000000">
+                    <tspan x="20" y="42">visulazation</tspan>
+                </text>
+            </g>
+            <g id="Group-6" transform="translate(578.000000, 143.000000)">
+                <rect id="Rectangle" stroke="#979797" fill="#D8D8D8" x="0.5" y="0.5" width="164" height="65"></rect>
+                <text id="refactor" font-family="HelveticaNeue, Helvetica Neue" font-size="24" font-weight="normal" fill="#000000">
+                    <tspan x="20" y="42">refactor</tspan>
+                </text>
+            </g>
+            <g id="Group-6" transform="translate(578.000000, 0.000000)">
+                <rect id="Rectangle" stroke="#979797" fill="#D8D8D8" x="0.5" y="0.5" width="164" height="65"></rect>
+                <text id="…" font-family="HelveticaNeue, Helvetica Neue" font-size="24" font-weight="normal" fill="#000000">
+                    <tspan x="20" y="42">…</tspan>
+                </text>
+            </g>
+            <text id="Graphviz" font-family="HelveticaNeue, Helvetica Neue" font-size="24" font-weight="normal" fill="#000000">
+                <tspan x="578" y="398">Graphviz</tspan>
+            </text>
+            <text id="Web" font-family="HelveticaNeue, Helvetica Neue" font-size="24" font-weight="normal" fill="#000000">
+                <tspan x="578" y="441">Web</tspan>
+            </text>
+            <text id="PlantUML" font-family="HelveticaNeue, Helvetica Neue" font-size="24" font-weight="normal" fill="#000000">
+                <tspan x="578" y="484">PlantUML</tspan>
+            </text>
+            <text id="compilers" font-family="HelveticaNeue, Helvetica Neue" font-size="24" font-weight="normal" fill="#000000">
+                <tspan x="0" y="245">compilers</tspan>
+            </text>
+            <text id="Antlr" font-family="HelveticaNeue, Helvetica Neue" font-size="24" font-weight="normal" fill="#000000">
+                <tspan x="0" y="292">Antlr</tspan>
+            </text>
+            <text id="Ctags" font-family="HelveticaNeue, Helvetica Neue" font-size="24" font-weight="normal" fill="#000000">
+                <tspan x="0" y="331">Ctags</tspan>
+            </text>
+            <text id="TreeSitter" font-family="HelveticaNeue, Helvetica Neue" font-size="24" font-weight="normal" fill="#000000">
+                <tspan x="0" y="378">TreeSitter</tspan>
+            </text>
+            <text id="CodeQuery" font-family="HelveticaNeue, Helvetica Neue" font-size="24" font-weight="normal" fill="#000000">
+                <tspan x="0" y="425">CodeQuery</tspan>
+            </text>
+            <path id="Line" d="M244,164 L268,176 L244,188 L244,178 L193,178 L193,174 L244,174 L244,164 Z" fill="#979797" fill-rule="nonzero"></path>
+            <path id="Line" d="M480.672794,194.252756 L481.710019,195.962775 L543.263,297.442 L551.813418,292.256424 L554,319 L531.29319,304.70312 L539.843,299.517 L478.289981,198.037225 L477.252756,196.327206 L480.672794,194.252756 Z" fill="#979797" fill-rule="nonzero"></path>
+            <path id="Line" d="M480.672794,30.2527563 L481.710019,31.9627754 L543.263,133.442 L551.813418,128.256424 L554,155 L531.29319,140.70312 L539.843,135.517 L478.289981,34.0372246 L477.252756,32.3272056 L480.672794,30.2527563 Z" fill="#979797" fill-rule="nonzero"></path>
+            <path id="Line" d="M530,163 L554,175 L530,187 L530,177 L479,177 L479,173 L530,173 L530,163 Z" fill="#979797" fill-rule="nonzero"></path>
+        </g>
+    </g>
+</svg>
