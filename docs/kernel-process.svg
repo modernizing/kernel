@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <svg width="744px" height="485px" viewBox="0 0 744 485" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
     <!-- Generator: Sketch 62 (91390) - https://sketch.com -->
-    <title>Group</title>
+    <title>Group 2</title>
     <desc>Created with Sketch.</desc>
     <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <g id="Group" transform="translate(1.000000, 0.000000)">
+        <g id="Group-2" transform="translate(1.000000, 0.000000)">
             <g id="Group-8" transform="translate(289.000000, 142.000000)">
                 <rect id="Rectangle" stroke="#979797" fill="#D8D8D8" x="0.5" y="0.5" width="164" height="65"></rect>
                 <text id="core-models-(kernel)" font-family="HelveticaNeue, Helvetica Neue" font-size="24" font-weight="normal" fill="#000000">
@@ -61,9 +61,11 @@
                 <tspan x="0" y="425">CodeQuery</tspan>
             </text>
             <path id="Line" d="M244,164 L268,176 L244,188 L244,178 L193,178 L193,174 L244,174 L244,164 Z" fill="#979797" fill-rule="nonzero"></path>
-            <path id="Line" d="M480.672794,194.252756 L481.710019,195.962775 L543.263,297.442 L551.813418,292.256424 L554,319 L531.29319,304.70312 L539.843,299.517 L478.289981,198.037225 L477.252756,196.327206 L480.672794,194.252756 Z" fill="#979797" fill-rule="nonzero"></path>
-            <path id="Line" d="M480.672794,30.2527563 L481.710019,31.9627754 L543.263,133.442 L551.813418,128.256424 L554,155 L531.29319,140.70312 L539.843,135.517 L478.289981,34.0372246 L477.252756,32.3272056 L480.672794,30.2527563 Z" fill="#979797" fill-rule="nonzero"></path>
-            <path id="Line" d="M530,163 L554,175 L530,187 L530,177 L479,177 L479,173 L530,173 L530,163 Z" fill="#979797" fill-rule="nonzero"></path>
+            <g id="Group" transform="translate(469.000000, 32.000000)" fill="#979797" fill-rule="nonzero">
+                <path id="Line" d="M0.727146706,172.680709 L2.02321909,174.203928 L83.47,269.924 L91.086446,263.444937 L97.5,289.5 L72.8078169,278.997805 L80.423,272.517 L-1.02321909,176.796072 L-2.31929147,175.272853 L0.727146706,172.680709 Z"></path>
+                <path id="Line" d="M97.5,0.5 L90.509434,26.4062152 L83.038,19.758 L1.99406215,110.829578 L0.664483906,112.32364 L-2.32364039,109.664484 L-0.994062147,108.170422 L80.05,17.099 L72.5806882,10.4512763 L97.5,0.5 Z"></path>
+                <path id="Line" d="M73.5,130.5 L97.5,142.5 L73.5,154.5 L73.5,144.5 L-1.5,144.5 L-1.5,140.5 L73.5,140.5 L73.5,130.5 Z"></path>
+            </g>
         </g>
     </g>
 </svg>
