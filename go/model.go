@@ -1,11 +1,11 @@
 package _go
 
-type KModule struct {
+type NutModule struct {
 	name  string
-	items KModuleItem
+	items NutModuleItem
 }
 
-type KModuleItem struct {
+type NutModuleItem struct {
 	itemType ItemType
 }
 
@@ -33,6 +33,6 @@ const (
 	ReturnBlock DataType = 3
 )
 
-type KFunction struct {
+type NutFunction struct {
 	name string
 }
