@@ -57,7 +57,7 @@ pub struct NutProto {
 }
 
 /// TypeRef in CLR
-pub struct NutType {
+pub struct NutTypeRef {
     name: String,
     flags: Vec<NutModifier>,
     functions: Vec<NutFunction>,
