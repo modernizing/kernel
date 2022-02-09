@@ -1,5 +1,5 @@
 pub struct NutProject {
-    pub manifest: NutManifest
+    pub manifest: NutManifest,
 }
 
 /// module manifest
@@ -15,7 +15,7 @@ pub struct NutManifest {
     /// static files
     pub resources: Vec<String>,
     pub additions: Vec<String>,
-    pub exported_types: Vec<String>
+    pub exported_types: Vec<String>,
 }
 
 ///
@@ -26,7 +26,7 @@ pub struct NutImport {
     pub source: String,
     pub as_name: String,
     pub usage_name: String,
-    pub scope: String
+    pub scope: String,
 }
 
 /// Module is a high level entity of Nut program
@@ -51,23 +51,34 @@ pub struct NutFunction {
 ///```
 pub struct NutProto {
     name: String,
-    args: Vec<String>
+    // alias to `type`
+    proto_type: NutDataType,
+    args: Vec<String>,
+}
+
+/// TypeRef in CLR
+pub struct NutType {
+    name: String,
+    flags: Vec<NutModifier>,
+    functions: Vec<NutFunction>,
+    fields: Vec<NutItem>,
+    properties: Vec<NutItem>,
+    event: Vec<NutItem>,
 }
 
 pub struct NutItem {
     /// ref to module
     item_type: NutDataType,
-    ///
     item_value: ItemValue,
 }
 
 pub struct NutStr {
     len: u8,
-    string: String
+    string: String,
 }
 
 pub struct NutName {
-    name: String
+    name: String,
 }
 
 /// item_value should be one of items
@@ -87,23 +98,23 @@ pub enum ItemValue {
 
 /// parameter
 pub struct NutParam {
-    flag: ParamFlag
+    flag: ParamFlag,
 }
 
 pub enum ParamFlag {
-    In, Out, Retval
+    In,
+    Out,
+    Retval,
 }
 
-pub struct NutProperty {
-
-}
+pub struct NutProperty {}
 
 pub enum NutStructModifier {
     Virtual,
     New,
     Override,
     Sealed,
-    Abstract
+    Abstract,
 }
 
 /// MIR_insn_code_t
@@ -133,7 +144,7 @@ pub enum NutInstructionCode {
 /// design for prototype
 pub struct NutCall {
     prototype: String,
-    inline: String
+    inline: String,
 }
 
 pub enum NutModifier {
@@ -145,7 +156,7 @@ pub enum NutModifier {
     /// 如 `pub(crate)`
     /// 在某些语言中使用 internal
     Assembly,
-    Public
+    Public,
 }
 
 /// location of source code
@@ -153,12 +164,10 @@ pub struct NutPosition {
     pub start_line: i8,
     pub start_position: i8,
     pub end_line: i8,
-    pub end_position: i8
+    pub end_position: i8,
 }
 
-pub struct NutInline {
-
-}
+pub struct NutInline {}
 
 pub enum NutDataType {
     /// Integer types of different size:
@@ -172,22 +181,34 @@ pub enum NutDataType {
     /// return block
     ReturnBlock(NutReturnBlock),
     /// UNDEF, BOUND ? may be array
-    CollectionType(NutCollection)
+    CollectionType(NutCollection),
 }
 
 pub enum NutIntegerType {
-    I8, U8, I16, U16, I32, U32, I64, U64
+    I8,
+    U8,
+    I16,
+    U16,
+    I32,
+    U32,
+    I64,
+    U64,
 }
 
 pub enum NutFloatType {
-    Float, Double, LongDouble,
+    Float,
+    Double,
+    LongDouble,
 }
 
 pub enum NutPointerType {
-    Pointer, MemoryBlock
+    Pointer,
+    MemoryBlock,
 }
 
 pub enum NutReturnBlock {}
+
 pub enum NutCollection {
-    Undef, Bound
+    Undef,
+    Bound,
 }
