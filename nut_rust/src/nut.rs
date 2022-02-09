@@ -1,10 +1,40 @@
 pub struct NutProject {
+    pub manifest: NutManifest
+}
 
+/// module manifest
+pub struct NutManifest {
+    pub major_version: String,
+    pub minor_version: String,
+    pub build_number: String,
+    pub revision_number: String,
+    ///
+    pub culture: String,
+    ///
+    pub flags: Vec<String>,
+    /// static files
+    pub resources: Vec<String>,
+    pub additions: Vec<String>,
+    pub exported_types: Vec<String>
+}
+
+///
+/// ```java
+///
+/// ```
+pub struct NutImport {
+    pub source: String,
+    pub as_name: String,
+    pub usage_name: String,
+    pub scope: String
 }
 
 /// Module is a high level entity of Nut program
 pub struct NutModule {
     name: String,
+    /// todo: spike on manifest ?
+    export: Vec<String>,
+    import: Vec<String>,
 }
 
 pub struct NutFunction {
@@ -14,14 +44,20 @@ pub struct NutFunction {
 }
 
 /// Prototype
-pub struct NutPrototype {
+/// in MIR, use proto to save call method, and parameters
+///```mir
+///p_printf: proto p:fmt, i32:result
+///p_sieve:  proto i32, i32:iter
+///```
+pub struct NutProto {
     name: String,
     args: Vec<String>
 }
 
 pub struct NutItem {
     /// ref to module
-    item_type: NutType,
+    item_type: NutDataType,
+    ///
     item_value: ItemValue,
 }
 
@@ -34,29 +70,19 @@ pub struct NutName {
     name: String
 }
 
-pub struct ItemValue {
-    func: NutFunction,
-    proto: NutPrototype,
-    import_id: NutName,
-    export_id: NutName,
-    forward_id: NutName,
-    // todo: data
-    data: String,
+/// item_value should be one of items
+pub enum ItemValue {
+    Function(NutFunction),
+    Prototype(NutProto),
+    ImportID(NutName),
+    ExportId(NutName),
+    ForwardId(NutName),
     // todo: ref data
-    ref_data: String,
+    Data(String),
+    // todo: ref data
+    RefData(String),
     // todo: expr data
-    expr_data: String,
-}
-
-///
-/// ```java
-///
-/// ```
-pub struct NutImport {
-    pub source: String,
-    pub as_name: String,
-    pub usage_name: String,
-    pub scope: String
+    ExprData(String),
 }
 
 /// parameter
@@ -134,15 +160,17 @@ pub struct NutInline {
 
 }
 
-pub enum NutType {
+pub enum NutDataType {
     /// Integer types of different size:
     IntegerType(NutIntegerType),
     /// Float or (long) double type
     FloatType(NutFloatType),
     /// Pointer, memory block
     PointerType(NutPointerType),
+    /// type
+    TypeType(NutTypeType),
     /// return block
-    TypeType(NutReturnBlock),
+    ReturnBlock(NutReturnBlock),
     /// UNDEF, BOUND ? may be array
     CollectionType(NutCollection)
 }
