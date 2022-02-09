@@ -48,6 +48,38 @@ pub struct ItemValue {
     expr_data: String,
 }
 
+///
+/// ```java
+///
+/// ```
+pub struct NutImport {
+    pub source: String,
+    pub as_name: String,
+    pub usage_name: String,
+    pub scope: String
+}
+
+/// parameter
+pub struct NutParam {
+    flag: ParamFlag
+}
+
+pub enum ParamFlag {
+    In, Out, Retval
+}
+
+pub struct NutProperty {
+
+}
+
+pub enum NutStructModifier {
+    Virtual,
+    New,
+    Override,
+    Sealed,
+    Abstract
+}
+
 /// MIR_insn_code_t
 /// Insns: [GNU Insns](https://gcc.gnu.org/onlinedocs/gccint/Insns.html)
 pub enum NutInstructionCode {
@@ -72,9 +104,30 @@ pub enum NutInstructionCode {
     Call(NutCall),
 }
 
+/// design for prototype
 pub struct NutCall {
     prototype: String,
     inline: String
+}
+
+pub enum NutModifier {
+    Private,
+    /// 可由派生类型访问
+    /// 在 Java 中是 `protected`
+    Family,
+    /// 可由一个程序集中的任何代码访问
+    /// 如 `pub(crate)`
+    /// 在某些语言中使用 internal
+    Assembly,
+    Public
+}
+
+/// location of source code
+pub struct NutPosition {
+    pub start_line: i8,
+    pub start_position: i8,
+    pub end_line: i8,
+    pub end_position: i8
 }
 
 pub struct NutInline {
@@ -105,6 +158,7 @@ pub enum NutFloatType {
 pub enum NutPointerType {
     Pointer, MemoryBlock
 }
+
 pub enum NutReturnBlock {}
 pub enum NutCollection {
     Undef, Bound
