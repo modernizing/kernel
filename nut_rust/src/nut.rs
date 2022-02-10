@@ -2,15 +2,12 @@ pub struct NutProject {
     pub manifest: NutManifest,
 }
 
-/// module manifest
+/// module/package manifest
 pub struct NutManifest {
     pub major_version: String,
     pub minor_version: String,
     pub build_number: String,
     pub revision_number: String,
-    ///
-    pub culture: String,
-    ///
     pub flags: Vec<String>,
     /// static files
     pub resources: Vec<String>,
@@ -18,10 +15,12 @@ pub struct NutManifest {
     pub exported_types: Vec<String>,
 }
 
-///
-/// ```java
-///
-/// ```
+/// todo: add document test
+/// >>> test_cases
+/// Java: `import java.io.BufferedReader`
+/// TypeScript: `import { ZipCodeValidator as ZCV } from "./ZipCodeValidator"`
+/// Rust: `use deeply::nested::function as other_function`;
+/// <<<
 pub struct NutImport {
     pub source: String,
     pub as_name: String,
@@ -30,9 +29,10 @@ pub struct NutImport {
 }
 
 /// Module is a high level entity of Nut program
+/// equal to `Assembly` in CLR
 pub struct NutModule {
     name: String,
-    /// todo: spike on manifest ?
+    items: Vec<NutItem>,
     export: Vec<String>,
     import: Vec<String>,
 }
@@ -66,12 +66,6 @@ pub struct NutTypeRef {
     event: Vec<NutItem>,
 }
 
-pub struct NutItem {
-    /// ref to module
-    item_type: NutDataType,
-    item_value: ItemValue,
-}
-
 pub struct NutStr {
     len: u8,
     string: String,
@@ -81,10 +75,13 @@ pub struct NutName {
     name: String,
 }
 
-/// item_value should be one of items
-pub enum ItemValue {
+/// NutItem
+/// key value is `function`, `prototype` and `import`
+pub enum NutItem {
     Function(NutFunction),
     Prototype(NutProto),
+
+    /// todo: spike on remove
     ImportID(NutName),
     ExportId(NutName),
     ForwardId(NutName),
