@@ -33,7 +33,7 @@
             <g id="Group-6" transform="translate(578.000000, 0.000000)">
                 <rect id="Rectangle" stroke="#979797" fill="#D8D8D8" x="0.5" y="0.5" width="164" height="65"></rect>
                 <text id="…" font-family="HelveticaNeue, Helvetica Neue" font-size="24" font-weight="normal" fill="#000000">
-                    <tspan x="20" y="42">…</tspan>
+                    <tspan x="20" y="42">arch guard</tspan>
                 </text>
             </g>
             <text id="Graphviz" font-family="HelveticaNeue, Helvetica Neue" font-size="24" font-weight="normal" fill="#000000">
