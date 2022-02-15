@@ -2,7 +2,11 @@
 
 the design principles of new modernizing toolsets
 
-![Process](docs/kernel-process.svg)
+![Process](docs/process.svg)
+
+Kernel Tools
+
+![Kernel Tools Process](docs/kernel-process.svg)
 
 ## Todo
 
