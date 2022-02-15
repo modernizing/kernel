@@ -8,26 +8,14 @@ code analysis processes:
 
 current Modernizing Tools:
 
-- [Coca](https://github.com/modernizing/coca) for Java:
-    - model construction: Antlr
-    - model extraction: [domain](https://github.com/modernizing/coca/tree/master/pkg/domain)
-    - visual: graphviz
-    - patterns: test bad smells, bad smell,
-- [Guarding](https://github.com/modernizing/guarding) for multi-languages:
-    - model construction: [TreeSitter](https://github.com/modernizing/guarding/tree/master/guarding_ident)
-    - model extraction: [core](https://github.com/modernizing/guarding/tree/master/guarding_core)
-    - patterns: [Arch DSL](https://github.com/modernizing/guarding/tree/master/guarding_parser)
-- [Tequila](https://github.com/modernizing/tequila) for multi-languages;
-    - model construction: [Doxygen](https://github.com/modernizing/tequila/blob/master/viz/coll_viz.go)
-- [Lemonj](https://github.com/modernizing/lemonj) for CSS
-    - model construction: [Antlr](https://github.com/modernizing/lemonj/tree/main/lang)
-    - patterns: CSS bad smells
-- [Modeling](https://github.com/modernizing/modeling) for multi-languages:
-    - model construction: [Ctags](https://github.com/modernizing/modeling/tree/master/src/ctags)
-    - visual: UML, graphviz, D3.js
-- [SQLing](https://github.com/modernizing/sqling) for MySQL:
-    - model construction: Pingcap Parser
-    - visual: UML
+| Tools     | language support  | construction   | extraction   | patterns  | results    |
+|-----------|-------------------|----------------|---------|-----------|------------|
+| [Coca](https://github.com/modernizing/coca)  | Java, Go, Python | Antlr | [domain](https://github.com/modernizing/coca/tree/master/pkg/domain) | bad smell  | graphviz   |
+| [Guarding](https://github.com/modernizing/guarding) | by TreeSitter  | TreeSitter | [TreeSitter](https://github.com/modernizing/guarding/tree/master/guarding_ident) | [Arch DSL](https://github.com/modernizing/guarding/tree/master/guarding_parser) | |
+| [Tequila](https://github.com/modernizing/tequila)   | by Doxygen     | Doxygen    | [viz](https://github.com/modernizing/tequila/blob/master/viz/coll_viz.go)  |    | graphviz  |
+| [Lemonj](https://github.com/modernizing/lemonj)     | Antlr     |  CSS/LESS/SCSS  |   |    |
+| [Modeling](https://github.com/modernizing/modeling) | by Ctags  | Ctags  | [Ctags](https://github.com/modernizing/modeling/tree/master/src/ctags) | | UML, graphviz, D3.js |
+| [SQLing](https://github.com/modernizing/sqling)     | MySQL     | TiDB parser |   | |  UML |
 
 ## Todo
 
