@@ -76,7 +76,7 @@ CLASS_DEF -> CLASS_DEF [1:0]
 
 所以，要构建出一个完善的 AST 及其模型，基本上就是写一个语言的编译器前端。在现代的编程语言里，Rust 能提供一个非常不错的参考，如 Rust 的编译过程是 AST → HIR → MIR → LIR，其官方在引入  MIR 的时候写了一篇博客《[Introducing MIR](https://blog.rust-lang.org/2016/04/19/MIR.html)》
 
- ![Rust Flow](https://blog.rust-lang.org/images/2016-04-MIR/flow.svg)
+![Rust Flow](https://blog.rust-lang.org/images/2016-04-MIR/flow.svg)
 
 在 Rust 编译器里， HIR 相当于是 Rust 的 AST，它在源码的基础上进行解析、宏扩展和名称解析之后生成。如下是 Rust 的 hello, world! 生成的 HIR 表示：
 
@@ -195,7 +195,7 @@ type BSFunction struct {
 
 随着 Coca/Chapi 的演进，陆陆续续想支持 Golang、Java、Python 等语言。于是，一个平凡的 ClassNode 已经变成了 DataStruct：
 
-```go
+```kotlin
 @Serializable
 open class CodeDataStruct(
     var NodeName: String = "",
@@ -296,7 +296,7 @@ fn main() {
 
 与之相类似的，还有一个名为 [MIR Project](https://github.com/vnmakarov/mir) 的项目更有意思，它尝试建立多语言的抽象。只是从形式上来看，它接近于 LIR：
 
-```clike
+```c
 hello_m:  module
           import printf
 hello:    func i64
@@ -312,7 +312,7 @@ format:   string "hello, world\n"
 
 不过，在代码模型上，还是接近于 MIR 的：
 
-```clike
+```c
 /* Function definition */
 typedef struct MIR_func {
   const char *name;
@@ -349,4 +349,6 @@ typedef struct MIR_func {
 其它常见问题：
 
 * 没有类型怎么办？诸如于 JavaScript 这一类动态语言，就需要自己尝试性地做一些类型推断。
-* 在底层 MIR 真的能做融合吗？不确定，但是可以试试，毕竟有上述的 MIR 大佬说可以。
+* 在底层 MIR 真的能做融合吗？不确定，但是可以试试，毕竟有上述的 MIR 大佬说可以：[mir](https://github.com/vnmakarov/mir)。
+
+欢迎来构建和设计新的代码模型：[https://github.com/modernizing/kernel](https://github.com/modernizing/kernel)，然后重构已有的工具。
